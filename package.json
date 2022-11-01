@@ -1,0 +1,20 @@
+{
+  "name": "landing-async",
+  "version": "1.0.0",
+  "description": "small project where asynchrony is put into practice with the consumption of apis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juanvalgreen/Landing-Async.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juanvalgreen/Landing-Async/issues"
+  },
+  "homepage": "https://github.com/Juanvalgreen/Landing-Async#readme"
+}
