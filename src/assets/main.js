@@ -34,9 +34,7 @@ async function fetchData(urlApi){
             </h3>
             <h5 class="text-sm text-gray-400">
                 <span aria-hidden="true" class="absolute inset-0"></span>
-                ${song.track.artists.forEach(function (artist){
-                    
-                })}
+                ${song.track.artists[0].name}
             </h5>
         </div>
         </div>`).slice(0, 4).join('')}`;
