@@ -1,4 +1,4 @@
-const API='https://spotify23.p.rapidapi.com/playlist_tracks/?id=37i9dQZF1DX4Wsb4d7NKfP&offset=0&limit=100';
+const API='https://spotify23.p.rapidapi.com/playlist_tracks/?id=5kCr18BXMTjPLwZUOTBcO7%3Fsi%3De93ab2b4397149b1&offset=0&limit=100';
 const content=null || document.getElementById('content');
 //var artistNames='';
 
@@ -22,7 +22,7 @@ async function fetchData(urlApi){
     try{
         const songs=await fetchData(API);
         
-    let view =`${songs.items.map(song =>`         
+    let view =`${songs.tracks.items.map(song =>`         
     <div class="group relative">
         <div
         class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
