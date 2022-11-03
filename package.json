@@ -4,7 +4,7 @@
   "description": "small project where asynchrony is put into practice with the consumption of apis",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d src"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Juanvalgreen/Landing-Async/issues"
   },
-  "homepage": "https://github.com/Juanvalgreen/Landing-Async#readme"
+  "homepage": "https://github.com/Juanvalgreen/Landing-Async#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }
