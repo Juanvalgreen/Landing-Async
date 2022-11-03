@@ -1,6 +1,6 @@
 const API='https://spotify23.p.rapidapi.com/playlist_tracks/?id=37i9dQZF1DX4Wsb4d7NKfP&offset=0&limit=100';
 const content=null || document.getElementById('content');
-var artistNames='';
+//var artistNames='';
 
 
 const options = {
@@ -14,13 +14,14 @@ const options = {
 async function fetchData(urlApi){
     const response = await fetch(urlApi,options);
     const data = await response.json();
-
+    
     return data;
 }
 
 (async () => {
- try{
-    const songs=await fetchData(API);
+    try{
+        const songs=await fetchData(API);
+        
     let view =`${songs.items.map(song =>`         
     <div class="group relative">
         <div
@@ -30,30 +31,19 @@ async function fetchData(urlApi){
         <div class="mt-4 flex justify-between">
             <h3 class="text-sm text-black-700">
                 <span aria-hidden="true" class="absolute inset-0"></span>
-                ${song.track.name}
+                ${song.track.name} 
             </h3>
             <h5 class="text-sm text-gray-400">
                 <span aria-hidden="true" class="absolute inset-0"></span>
-                ${song.track.artists[0].name}
+                ${song.track.artists.map(k=>k.name +' ')}
             </h5>
         </div>
-        </div>`).slice(0, 4).join('')}`;
+        </div>`).slice((Math.random() * (25 - 0) + 0),(Math.random() * (50 - 25) + 25)).join('')}`;
   content.innerHTML = view;
+ 
  }
  catch(error){
      console.log(error);
  }
 })();
 
-function concatenate(objectArray){
-    
-    let values=objectArray.values();
-    artistNames += values[1];
-
-    
-
-    
-
-
-
-}
